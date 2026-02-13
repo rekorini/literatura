@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Българска литература</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* МЕНЮ КОНТЕЙНЕР */
+        .menu-container {
+            background-color: #2c3e50;
+            padding: 15px;
+        }
+
+        /* КОНТЕЙНЕР ЗА БУТОНИТЕ */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* СЕКЦИИ */
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        /* АВТОРИ */
+        .authors {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .author {
+            text-align: center;
+        }
+
+        .author img {
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="menu-container">
+    <div class="menu">
+        <a href="#" onclick="showSection('home')">Начало</a>
+        <a href="#" onclick="showSection('authors')">Автори</a>
+        <a href="#" onclick="showSection('works')">Произведения</a>
+    </div>
+</div>
+
+<section id="home" class="active">
+    <h1>Български литературна история </h1>
+    <p>Повод за българите да се гордеем. </p>
+</section>
+
+<section id="authors">
+    <h1>Автори и техни снимки</h1>
+
+    <div class="authors">
+        <div class="author">
+<img src="snimiki/250px-BASA-937K-1-410-7-Ivan_Vazov_(cropped).jpg" >
+
+            <p>Иван Вазов</p>
+        </div>
+
+        <div class="author">
+            <img src="snimiki/BASA-1271K-1-161-2-Hristo_Botev,_1875.JPG" >
+
+            <p>Христо Ботев</p>
+        </div>
+
+        <div class="author">
+            <img src="snimiki/Elin_Pelin.jpg" >
+
+            <p>Елин Пелин</p>
+        </div>
+
+        <div class="author">
+           <img src="snimiki/BASA-2128K-1-251-2-Yordan_Yovkov.jpg">
+
+            <p>Йордан Йовков</p>
+        </div>
+    </div>
+</section>
+
+<section id="works">
+    <h1>Произведения</h1>
+    <ul>
+        <li>Под игото – Иван Вазов</li>
+        <li>Бай Ганьо – Алеко Константинов</li>
+        <li>Гераците – Елин Пелин</li>
+        <li>Старопланински легенди – Йордан Йовков</li>
+       
+        <button onclick="document.location='https://domashno.bg/'">Анализи на произведения </button>
+
+        <style>
+         .container{
+            background-color:
+             white;
+             padding: 20px;
+         }
+         .box{
+           width: 150px;
+           height: 550px;
+           background-color:
+            white;
+         }
+        </style>
+        <div class = "container">
+            <h2>Под игото
+
+            </h2>
+            <div class ="box">
+                <p>
+
+Тая прохладна майска вечер чорбаджи Марко, гологлав, по халат, вечеряше с челядта си на двора.
+
+Господарската трапеза беше сложена, както по обикновение, под лозата, между бистрия и студен чучур на барата, който като лястовичка пееше, деня и нощя, и между високите бухлати чемшири, що се тъмнееха край зида, зиме и лете все зелени. Фенерът светеше, окачен на клончето на едно люлеково дръвче, което приятелски надвисваше миризливите си люлеки над главите на челядта.</p>
+            </div>
+            <h3>Бай Ганьо</h3>
+            <div class="box">
+                <p>Помогнаха на бай Ганя да смъкне от плещите си агарянския ямурлук, наметна си той една белгийска мантия — и всички рекоха, че бай Ганьо е вече цял европеец.
+
+ 
+
+
+
+ 
+
+— Хайде всеки от нас да разкаже нещо за бай Ганя. — Хайде — извикаха всички. — Аз ще разкажа. — Чакайте, аз зная повече… — Не, аз, ти нищо не знаеш.
+
+Дигна се глъчка. Най-сетне се съгласихме да почне Стати. И той почна.</p>
+            </div>
+        </div>
+    </ul>
+</section>
+
+<footer>
+    <p> Българска литература</p>
+</footer>
+
+<script>
+    function showSection(id) {
+        let sections = document.querySelectorAll("section");
+        sections.forEach(section => section.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
+
